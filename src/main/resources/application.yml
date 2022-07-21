@@ -1,0 +1,30 @@
+#-----------------------------------------------------------------------------------------------
+# PROFILE LOCAL
+#-----------------------------------------------------------------------------------------------
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+      database: test
+      username: ${username}
+      password: ${password}
+      host: localhost
+      port: 27017
+
+#------------------------------
+# SPRING CLOUD AWS
+#------------------------------
+cloud:
+  aws:
+    credentials:
+      accessKey:
+      secretKey:
+      instanceProfile: true
+      useDefaultAwsCredentialsChain: true
+    region:
+      static: eu-central-1
+    stack:
+      auto: false
+
+
+

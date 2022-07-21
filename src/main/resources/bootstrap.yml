@@ -1,0 +1,18 @@
+server:
+  port: ${SERVER_PORT:8080} # Server HTTP port.
+  servlet.context-path: / # Context path of the application.
+
+spring:
+  application:
+    name: springboot-aws-secret-manager-sample
+  profiles:
+    active: local
+
+aws:
+  secretsmanager:
+    enabled: true
+    profile-separator: "/"
+    name: springboot-aws-secret-manager-sample
+    prefix: /secret
+    default-context: springboot-aws-secret-manager-sample
+    failFast: false
